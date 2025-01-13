@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav Bar Design */
+.navi {
+  width: 100vw;
+  background-color: transparent;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.pages, .socials, .homePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pages li, .homePage li {
+  margin: 0 15px;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.nav-link {
+  text-decoration: none; /* Remove default underline */
+  color: inherit;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: #FEFEFE;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #FEFEFE;
+}
+
+.nav-link:hover::after, .nav-link:focus::after {
+  opacity: 1;
+}
+
+.socials li {
+  margin: 5px;
+  text-align: center;
+}
+
+ul {
+  flex: 1;
+  text-align: center;
+  list-style: none;
+}
+
+.pages a, .homePage a{
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: bolder;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.linkIcons {
+  height: 25px;
+}
+
+/* Home Page Design */
+.home {
+  min-height: 100vh;
+  font-family: "Poppins", serif;
+  font-weight: 700;
+}
+
+/* About Me Page Design */
+.aboutMe {
+  min-height: 100vh;
+  font-family: "Poppins", serif;
+  font-weight: 700;
+}
