@@ -11,28 +11,10 @@
 .navi {
   width: 100vw;
   background-color: transparent;
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-}
-
-.pages, .socials, .homePage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.pages li, .homePage li {
-  margin: 0 15px;
-  padding: 5px;
-  text-align: center;
-  position: relative;
-  transition: all 0.4s;
 }
 
 .nav-link {
-  text-decoration: none; /* Remove default underline */
+  text-decoration: none;
   color: inherit;
   position: relative;
   transition: all 0.3s;
@@ -58,6 +40,20 @@
   opacity: 1;
 }
 
+.pages, .socials, .homePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pages a, .homePage a {
+  margin: 0 10px;
+  padding: 5px;
+  transition: all 0.4s;
+}
+
 .socials li {
   margin: 5px;
   text-align: center;
@@ -73,7 +69,7 @@ ul {
   font-family: "Montserrat", sans-serif;
   color: white;
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -84,15 +80,50 @@ ul {
 }
 
 /* Home Page Design */
-.home {
-  min-height: 100vh;
+.introPage, .skillsPage, .aboutPage {
+
   font-family: "Poppins", serif;
   font-weight: 700;
 }
 
-/* About Me Page Design */
-.aboutMe {
-  min-height: 100vh;
-  font-family: "Poppins", serif;
-  font-weight: 700;
+.introPage {
+  min-height: 60vh;
 }
+
+.skillsPage, .aboutPage {
+  min-height: 50vh;
+}
+
+.projectsPage {
+  min-height: 100vh;
+}
+
+.progress {
+  height: 25px; 
+  background-color: #ddd; 
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  text-align: center;
+  line-height: 25px; 
+  font-weight: bold;
+  background-color: #28a745; 
+  color: white; 
+}
+
+/* About */
+h1 {
+  padding-bottom: 15px;
+  padding-left: 13%;
+}
+
+.btnCv, .btnCert {
+  width: 150px;
+  padding: 13px;
+  margin: 10px;
+}
+
+/* Skills */
