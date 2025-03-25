@@ -1,79 +1,187 @@
-import React from 'react'
-import '../styles.css';
+import React, { useEffect } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
+import "../styles.css";
 
 const Home = () => {
-    function SkillProgress({ name, level, color }) {
-        return (
-          <div className="mb-3">
-            <div className="d-flex justify-content-between">
-              <span className="fw-bold">{name}</span>   
-            </div>
-            <div className="progress" style={{ height: "25px" }}>
-              <div className={`progress-bar ${color}`} style={{ width: level }}></div>
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const handleScroll = () => {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < window.innerHeight * 0.75) {
+          section.classList.add("appear");
+        }
+      });
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  function SkillProgress({ name, level }) {
+    return (
+      <div className="mb-3">
+        <div className="d-flex justify-content-between">
+          <span className="fw-bold">{name}</span>
+        </div>
+        <div className="progress" style={{ height: "25px" }}>
+          <div
+            className="progress-bar"
+            style={{ width: level, backgroundColor: "#FD8302" }}
+          ></div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <ScrollAnimation animateIn="fadeInDown" duration={1.5}>
+        <section id="introPage">
+          <div className="introPage p-4">
+            <div className="row container mt-5 justify-content-center d-lg-flex">
+              <div className="intro col-md-6">
+                <p className="h1 fw-bolder">
+                  <span className="h3 fw-bold">Hello!</span>
+                  <br />
+                  I'm John Meynard Demandante
+                  <br />
+                  <span className="h2 fw-bold">A Computer Science Student</span>
+                </p>
+              </div>
             </div>
           </div>
-        );
-    }
+        </section>
+      </ScrollAnimation>
 
-    return (
-        <div>
-            <section id="introPage">
-                <div className='introPage'>
-                    <div className='row container mt-5 justify-content-center d-lg-flex'>
-                        <div className='intro col-md-6'>
-                            <p className='h1 fw-bolder'>     
-                                <span className='h3 fw-bold'>Hello!</span><br/>
-                                I'm John Meynard Demandante <br/>
-                                <span className='h2 fw-bold'>A Computer Science Student</span>
-                            </p>   
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <ScrollAnimation animateIn="fadeInLeft" duration={1.5}>
+        <section id="aboutPage" className="text-white p-4">
+          <div className="aboutPage col-8 mx-auto">
+            <h1 className="fw-bolder">About</h1>
+            <p className="p-4 col-11 text-white mx-auto fw-bold">
+              A 4th-year Computer Science student at Holy Angel University,
+              currently working in Clark International Airport Corporation as
+              an Intern.
+            </p>
+            <div className="col-6 mx-auto text-center">
+              <ul className="about-info">
+                <li className="info-item d-flex justify-content-between">
+                  <span>Name:</span>
+                  <span className="fw-normal">John Meynard Demandante</span>
+                </li>
+                <li className="info-item d-flex justify-content-between">
+                  <span>Date of birth:</span>
+                  <span className="fw-normal">July 03, 2003</span>
+                </li>
+                <li className="info-item d-flex justify-content-between">
+                  <span>Address:</span>
+                  <span className="fw-normal">San Fernando, Pampanga</span>
+                </li>
+                <li className="info-item d-flex justify-content-between">
+                  <span>Email:</span>
+                  <span className="fw-normal">demandantem5@gmail.com</span>
+                </li>
+                <li className="info-item d-flex justify-content-between">
+                  <span>Phone: </span>
+                  <span className="fw-normal">+639704953435</span>
+                </li>
+              </ul>
+            </div>
+            <div className="d-flex justify-content-end">
+              <button className="btnCert fw-bold">Certificates</button>
+              <button className="btnCV fw-bold">Download CV</button>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
 
-            <section id="aboutPage" className="text-white p-4">
-                <div className='aboutPage'>
-                    <h1 className='fw-bolder'>About</h1>
-                    <div className='row'>
-                        <h4 className="info p-4 col-9 text-white mx-auto text-center fw-bolder">A 4th-year Computer Science student at Holy Angel University, 
-                        currently working in Clark International Airport Corporation as an Intern. 
-                        Besides programming and scripting, I am passionate about data analytics, machine learning. 
-                        In my free time, I enjoy watching tech-related videos online, and playing video games.
-                        </h4>       
-                    </div>
-                        <button className="btn-primary bg-success text-white fw-bolder float-end">Certificates</button>
-                        <button className="btn-primary bg-success text-white fw-bolder float-end">Download CV</button>
+      <ScrollAnimation animateIn="fadeInUp" duration={1.5}>
+        <section id="skillsPage" className="skillsPage">
+          <div className="text-white p-4 col-8 mx-auto bg-custom">
+            <h1 className="fw-bolder">Tech Skills</h1>
+            <div className="skillsPage p-3 text-white">
+              <div className="row mx-auto justify-content-center">  
+                <div className="col-md-6">
+                  <SkillProgress name="HTML" level="90%" />
+                  <SkillProgress name="CSS" level="75%" />
+                  <SkillProgress name="Python" level="80%" />
+                  <SkillProgress name="Power BI" level="75%" />
                 </div>
-            </section>
-      
-            <section id="skillsPage" className="skillsPage text-white p-4">
-                <h1 className="fw-bolder">Tech Skills</h1>
-                <div className="skillsPage p-3 text-white">
-                    <div className="row">
-                        <div className="col-md-6">
-                            <SkillProgress name="HTML" level="90%" color="bg-success" />
-                            <SkillProgress name="CSS" level="75%" color="bg-success" />
-                            <SkillProgress name="Python" level="80%" color="bg-success" />
-                            <SkillProgress name="Power BI" level="75%" color="bg-success" />
-                        </div>
-                        <div className="col-md-6">
-                            <SkillProgress name="JavaScript" level="60%" color="bg-success" />
-                            <SkillProgress name="React" level="75%" color="bg-success" />
-                            <SkillProgress name="Java" level="75%" color="bg-success" />
-                            <SkillProgress name="Excel" level="80%" color="bg-success" />
-                        </div>
-                    </div>
+                <div className="col-md-6">
+                  <SkillProgress name="JavaScript" level="60%" />
+                  <SkillProgress name="React" level="75%" />
+                  <SkillProgress name="Java" level="75%" />
+                  <SkillProgress name="Excel" level="80%" />
                 </div>
-            </section>
+              </div>
+            </div>
+          </div>
 
-            <section id="projectsPage" calssName="projectsPage text-white p-4">
-                <h1 className="fw-bolder">Projects</h1>
-                <div className="projectsPage">
-
+          <div className="text-white p-4 col-8 mx-auto bg-custom">
+            <h1 className="fw-bolder">Soft Skills</h1>
+            <div className="skillsPage p-3 text-white">
+              <div className="row mx-auto justify-content-center">  
+                <div className="col-md-6">
+                  <SkillProgress name="Teamwork" level="90%" />
+                  <SkillProgress name="Problem Solving" level="85%" />
+                  <SkillProgress name="Time Management" level="75%" />
                 </div>
-            </section>
+                <div className="col-md-6">
+                  <SkillProgress name="Flexibility" level="75%" />
+                  <SkillProgress name="Problem Analysis" level="80%" />
+                  <SkillProgress name="Decision Making" level="65%" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      <section id="projectsPage" className="pt-4">
+        <div className="projectsPage col-8 mx-auto">
+          <h1 className="fw-bolder">Projects</h1>
+
+          <div className="row">
+            <div className="col-md-6 mb-4">
+              <div className="project-card">
+                <div className="project-info">
+                  <h5 className="project-title fw-bolder text-center">Bird Sound Classification</h5>
+                  <p className="project-desc fw-normal text-center">A CNN model developed in Python classifies bird sounds from audio spectrograms. Integrated into a Flutter-based mobile app, it enables real-time bird sound recognition for research and birdwatching.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 mb-4">
+              <div className="project-card">
+                <div className="project-info">
+                  <h5 className="project-title fw-bolder text-center">Job Satisfaction Prediction</h5>
+                  <p className="project-desc fw-normal text-center">This is a short project description.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-md-6 mb-4">
+              <div className="project-card">
+                <div className="project-info">
+                  <h5 className="project-title fw-bolder text-center">Decentralized Ledger</h5>
+                  <p className="project-desc fw-normal text-center">This is a short project description.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 mb-4">
+              <div className="project-card">
+                <div className="project-info">
+                  <h5 className="project-title fw-bolder text-center">Document Management System</h5>
+                  <p className="project-desc fw-normal text-center">This is a short project description.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    )
-}
+      </section>
+    </div>
+  );
+};
 
-export default Home
+export default Home;

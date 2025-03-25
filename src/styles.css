@@ -7,6 +7,26 @@
   padding: 0;
 }
 
+.bg-custom {
+  background-color: #121F45 !important;
+  color: white;
+}
+
+.bg-custom2 {
+  background-color: #6692FF !important;
+  color: white;
+}
+
+section {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+
+section.appear {
+  opacity: 1;
+}
+
 /* Nav Bar Design */
 .navi {
   width: 100vw;
@@ -48,12 +68,6 @@
   margin-top: 10px;
 }
 
-.pages a, .homePage a {
-  margin: 0 10px;
-  padding: 5px;
-  transition: all 0.4s;
-}
-
 .socials li {
   margin: 5px;
   text-align: center;
@@ -73,6 +87,9 @@ ul {
   display: flex;
   align-items: center;
   text-decoration: none;
+  margin: 0 10px;
+  padding: 5px;
+  transition: all 0.4s;
 }
 
 .linkIcons {
@@ -80,8 +97,7 @@ ul {
 }
 
 /* Home Page Design */
-.introPage, .skillsPage, .aboutPage {
-
+.introPage, .skillsPage, .aboutPage, .projectsPage {
   font-family: "Poppins", serif;
   font-weight: 700;
 }
@@ -90,14 +106,44 @@ ul {
   min-height: 60vh;
 }
 
-.skillsPage, .aboutPage {
-  min-height: 50vh;
+.skillsPage {
+  min-height: 40vh;
+}
+
+.aboutPage {
+  min-height: 70vh;
 }
 
 .projectsPage {
-  min-height: 100vh;
+  min-height: 75vh;
 }
 
+/* About */
+h1 {
+  padding-bottom: 2px;
+  padding-left: 5%;
+}
+
+.btnCV, .btnCert {
+  background-color: #121F45;
+  border: none  ;
+  color: white;
+  padding: 13px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+  margin-left: 12px;
+}
+
+.btnCV {
+  margin-right: 15%;
+}
+
+.info-item {
+  margin-bottom: 20px;
+}
+
+/* Skills */
 .progress {
   height: 25px; 
   background-color: #ddd; 
@@ -110,20 +156,39 @@ ul {
   text-align: center;
   line-height: 25px; 
   font-weight: bold;
-  background-color: #28a745; 
+  background-color: #102B4E; 
   color: white; 
 }
 
-/* About */
-h1 {
-  padding-bottom: 15px;
-  padding-left: 13%;
+/* Projects */
+.project-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: #121F45;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 
-.btnCv, .btnCert {
-  width: 150px;
-  padding: 13px;
-  margin: 10px;
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-/* Skills */
+.project-desc {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px #FD8302;
+}
+
+.project-card:hover .project-desc {
+  opacity: 1;
+  max-height: 100px;
+}

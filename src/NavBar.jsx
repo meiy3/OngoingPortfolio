@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { Link as ScrollLink } from 'react-scroll';
 import './styles.css';
 import githubLogo from './assets/github-logo.png'
 import linkedinLogo from './assets/linkedin.png'
@@ -19,16 +20,16 @@ const NavBar = () => {
       <div className="row w-100">
         <div className="col-4">
           <ul className="homePage">
-            <li><a href="#introPage" className="nav-link">Home</a></li>
+            <li><ScrollLink to="introPage" smooth={true} duration={500} className="nav-link" style={{ cursor: 'pointer' }}>Home</ScrollLink></li>
           </ul>
         </div>
 
         <div className="col-4">
           <ul className="pages">
-            <li><a href="#aboutPage" className="nav-link">About</a></li>
-            <li><a href="#skillsPage" className="nav-link">Skills</a></li>
-            <li><a href="#projectsPage" className="nav-link">Projects</a></li>
-            <li><a href="#othersPage" className="nav-link">Others</a></li>
+            <li><ScrollLink to="aboutPage" smooth={true} duration={500} className="nav-link" style={{ cursor: 'pointer' }}>About</ScrollLink></li>
+            <li><ScrollLink to="skillsPage" smooth={true} duration={500} className="nav-link" style={{ cursor: 'pointer' }}>Skills</ScrollLink></li>
+            <li><ScrollLink to="projectsPage" smooth={true} duration={500} className="nav-link" style={{ cursor: 'pointer' }}>Projects</ScrollLink></li>
+            <li><ScrollLink to="othersPage" smooth={true} duration={500} className="nav-link" style={{ cursor: 'pointer' }}>Others</ScrollLink></li>
           </ul>
         </div>
         
