@@ -20,7 +20,7 @@ const NavBar = () => {
       <div className="row w-100">
         <div className="col-4">
           <ul className="homePage">
-            <li><ScrollLink to="introPage" smooth={true} duration={500} className="nav-link" style={{ cursor: 'pointer' }}>Home</ScrollLink></li>
+            <li><ScrollLink to="introPage" smooth={true} duration={500} className="nav-link" style={{ cursor: 'pointer' }}>Meynard</ScrollLink></li>
           </ul>
         </div>
 

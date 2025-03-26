@@ -105,17 +105,14 @@ ul {
 .introPage {
   min-height: 60vh;
 }
-
 .skillsPage {
   min-height: 40vh;
 }
-
 .aboutPage {
   min-height: 70vh;
 }
-
 .projectsPage {
-  min-height: 75vh;
+  min-height: 95vh;
 }
 
 /* About */
@@ -125,7 +122,7 @@ h1 {
 }
 
 .btnCV, .btnCert {
-  background-color: #121F45;
+  background-color: #FD8302;
   border: none  ;
   color: white;
   padding: 13px 20px;
@@ -133,6 +130,7 @@ h1 {
   border-radius: 20px;
   transition: 0.3s ease-in-out;
   margin-left: 12px;
+  width: 175px;
 }
 
 .btnCV {
@@ -173,7 +171,14 @@ h1 {
 
 .project-title {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: bold; 
+}
+
+.title-line {
+  border-bottom: 3px solid #FD8302;
+  padding-bottom: 15px; 
+  width: 30%;
+
 }
 
 .project-desc {
@@ -185,7 +190,7 @@ h1 {
 
 .project-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 8px 16px #FD8302;
+  box-shadow: 0px 8px 16px #FD8302 ;
 }
 
 .project-card:hover .project-desc {
