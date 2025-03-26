@@ -5,6 +5,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .bg-custom {
@@ -20,17 +27,26 @@
 section {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
+  background-color: #1a1a1a;
 }
-
 
 section.appear {
   opacity: 1;
 }
 
+body.light-mode section {
+  background-color: #ffffff;
+}
+
 /* Nav Bar Design */
 .navi {
   width: 100vw;
-  background-color: transparent;
+  background-color: #1a1a1a;
+  transition: background-color 0.3s ease;
+}
+
+body.light-mode .navi {
+  background-color: #f8f9fa;
 }
 
 .nav-link {
@@ -79,7 +95,7 @@ ul {
   list-style: none;
 }
 
-.pages a, .homePage a{
+.pages a, .homePage a {
   font-family: "Montserrat", sans-serif;
   color: white;
   font-weight: bolder;
@@ -100,6 +116,9 @@ ul {
 .introPage, .skillsPage, .aboutPage, .projectsPage {
   font-family: "Poppins", serif;
   font-weight: 700;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .introPage {
@@ -107,6 +126,9 @@ ul {
 }
 .skillsPage {
   min-height: 40vh;
+  background-color: #121F45;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .aboutPage {
   min-height: 70vh;
@@ -139,12 +161,17 @@ h1 {
 
 .info-item {
   margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.info-item span {
+  color: #ffffff;
 }
 
 /* Skills */
 .progress {
   height: 25px; 
-  background-color: #ddd; 
+  background-color: #2a2a2a; 
   border-radius: 5px;
   overflow: hidden;
 }
@@ -178,7 +205,6 @@ h1 {
   border-bottom: 3px solid #FD8302;
   padding-bottom: 15px; 
   width: 30%;
-
 }
 
 .project-desc {
@@ -190,10 +216,82 @@ h1 {
 
 .project-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 8px 16px #FD8302 ;
+  box-shadow: 0px 8px 16px #FD8302;
+}
+
+body.light-mode .project-card:hover {
+  box-shadow: 0px 8px 16px rgba(253, 131, 2, 0.3);
 }
 
 .project-card:hover .project-desc {
   opacity: 1;
   max-height: 100px;
+}
+
+/* Light mode overrides */
+body.light-mode .introPage,
+body.light-mode .aboutPage,
+body.light-mode .skillsPage,
+body.light-mode .projectsPage,
+body.light-mode .bg-custom {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+body.light-mode .project-card,
+body.light-mode .skillsPage {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+body.light-mode .info-item,
+body.light-mode .info-item span,
+body.light-mode .project-title,
+body.light-mode .project-desc,
+body.light-mode .project-card,
+body.light-mode .nav-link:hover, 
+body.light-mode .nav-link:focus {
+  color: #000000;
+}
+
+body.light-mode .progress {
+  background-color: #e9ecef;
+}
+
+body.light-mode .progress-bar {
+  background-color: #FD8302;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode .bg-custom {
+  background-color: #f8f9fa !important;
+  color: #000000;
+}
+
+body.light-mode .navi {
+  background-color: #ffffff !important;
+}
+
+body.light-mode .nav-link,
+body.light-mode .pages a, 
+body.light-mode .homePage a {
+  color: #000000;
+}
+
+body.light-mode .nav-link::after {
+  background-color: #000000;
+}
+
+body.light-mode .project-card {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+body.light-mode .info-item,
+body.light-mode .info-item span {
+  color: #000000;
 }

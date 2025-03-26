@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { Link as ScrollLink } from 'react-scroll';
 import './styles.css';
 import githubLogo from './assets/github-logo.png'
 import linkedinLogo from './assets/linkedin.png'
+import darkIcon from './assets/dark.png'
+import lightIcon from './assets/light.png'
 import 'bootstrap/dist/css/bootstrap.css';
 
 const CustomLink = ({ to, external, children}) => {
@@ -15,6 +17,20 @@ const CustomLink = ({ to, external, children}) => {
 }
 
 const NavBar = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.remove('light-mode');
+    } else {
+      document.body.classList.add('light-mode');
+    }
+  }, [isDarkMode]);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
     <nav className="navi container-fluid bg-dark text-white">
       <div className="row w-100">
@@ -37,6 +53,24 @@ const NavBar = () => {
           <ul className='socials'>
             <li><CustomLink to="https://github.com/meiy3"><img src={githubLogo} alt="" className='linkIcons' /></CustomLink></li>
             <li><CustomLink to="https://www.linkedin.com/in/john-meynard-demandante-92574931b/"><img src={linkedinLogo} alt="" className='linkIcons' /></CustomLink></li>
+            <li>
+              <button 
+                onClick={toggleTheme} 
+                className="theme-toggle"
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  cursor: 'pointer',
+                  padding: '5px'
+                }}
+              >
+                <img 
+                  src={isDarkMode ? lightIcon : darkIcon} 
+                  alt={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"} 
+                  className='linkIcons' 
+                />
+              </button>
+            </li>
           </ul>
         </div>
       </div>

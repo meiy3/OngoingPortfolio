@@ -60,10 +60,10 @@ const Home = () => {
       </ScrollAnimation>
 
       <ScrollAnimation animateIn="fadeInLeft" duration={1.5}>
-        <section id="aboutPage" className="text-white p-4">
+        <section id="aboutPage" className="p-4">
           <div className="aboutPage col-8 mx-auto">
             <h1 className="fw-bolder">About</h1>
-            <p className="p-4 col-11 text-white mx-auto fw-bold">
+            <p className="p-4 col-11 mx-auto fw-bold">
               A 4th-year Computer Science student at Holy Angel University,
               currently working in Clark International Airport Corporation as
               an Intern.
@@ -95,7 +95,7 @@ const Home = () => {
             <div className="d-flex justify-content-end">
               <button className="btnCert fw-bold">Certificates</button>
               <a href={cv} download="Meynard_CV.pdf">
-              <button className="btnCV fw-bold">Download CV</button>
+                <button className="btnCV fw-bold">Download CV</button>
               </a>
             </div>
           </div>
@@ -103,10 +103,10 @@ const Home = () => {
       </ScrollAnimation>
 
       <ScrollAnimation animateIn="fadeInUp" duration={1.5}>
-        <section id="skillsPage" className="skillsPage">
-          <div className="text-white p-4 col-8 mx-auto bg-custom">
+        <section id="skillsPage" className="">
+          <div className="skillsPage p-4 col-8 mx-auto bg-custom">
             <h1 className="fw-bolder">Tech Skills</h1>
-            <div className="skillsPage p-3 text-white">
+            <div className="skillsPage p-3">
               <div className="row mx-auto justify-content-center">  
                 <div className="col-md-6">
                   <SkillProgress name="HTML" level="90%" />
@@ -124,9 +124,9 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="text-white p-4 col-8 mx-auto bg-custom">
+          <div className="p-4 col-8 mx-auto bg-custom">
             <h1 className="fw-bolder">Soft Skills</h1>
-            <div className="skillsPage p-3 text-white">
+            <div className="skillsPage p-3">
               <div className="row mx-auto justify-content-center">  
                 <div className="col-md-6">
                   <SkillProgress name="Teamwork" level="90%" />
@@ -145,57 +145,56 @@ const Home = () => {
       </ScrollAnimation>
 
       <ScrollAnimation animateIn="fadeInUp" duration={1.5}>
-      <section id="projectsPage" className="pt-4">
-        <div className="projectsPage col-8 mx-auto">
-          <h1 className="fw-bolder">Projects</h1>
-
-          <div className="row">
-            <div className="col-md-6 mb-4">
-              <div className="project-card">
-                <div className="project-info">
-                  <img src={birdImg} alt="Bird Sound Classification" className="project-image pb-4" />
-                  <h5 className="project-title fw-bolder text-center">Bird Sound Classification</h5>
-                  <div className="title-line mx-auto p-6"></div>
-                  <p className="project-desc fw-normal text-center pt-4">A CNN model developed in Python classifies bird sounds from audio spectrograms. Integrated into a Flutter-based mobile app, it enables real-time bird sound recognition for research and birdwatching.</p>
+        <section id="projectsPage" className="pt-4">
+          <div className="projectsPage col-8 mx-auto">
+            <h1 className="fw-bolder">Projects</h1>
+            <div className="row">
+              <div className="col-md-6 mb-4">
+                <div className="project-card">
+                  <div className="project-info">
+                    <img src={birdImg} alt="Bird Sound Classification" className="project-image pb-4" />
+                    <h5 className="project-title fw-bolder text-center">Bird Sound Classification</h5>
+                    <div className="title-line mx-auto p-6"></div>
+                    <p className="project-desc fw-normal text-center pt-4">A CNN model developed in Python classifies bird sounds from audio spectrograms. Integrated into a Flutter-based mobile app, it enables real-time bird sound recognition for research and birdwatching.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 mb-4">
+                <div className="project-card">
+                  <div className="project-info">
+                    <img src={jobImg} alt="Job Satisfaction Prediction" className="project-image pb-4" />
+                    <h5 className="project-title fw-bolder text-center">Job Satisfaction Prediction</h5>
+                    <div className="title-line mx-auto p-6"></div>
+                    <p className="project-desc fw-normal text-center pt-4">This application utilizes multiple linear regression in Python to predict job satisfaction based on various workplace factors, such as salary, and type of industry. By analyzing input data, it generates predictive insights, helping to assess overall employee satisfaction trends.</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 mb-4">
-              <div className="project-card">
-                <div className="project-info">
-                  <img src={jobImg} alt="Job Satisfaction Prediction" className="project-image pb-4" />
-                  <h5 className="project-title fw-bolder text-center">Job Satisfaction Prediction</h5>
-                  <div className="title-line mx-auto p-6"></div>
-                  <p className="project-desc fw-normal text-center pt-4">This application utilizes multiple linear regression in Python to predict job satisfaction based on various workplace factors, such as salary, and type of industry. By analyzing input data, it generates predictive insights, helping to assess overall employee satisfaction trends.</p>
+
+            <div className="row">
+              <div className="col-md-6 mb-4">
+                <div className="project-card">
+                  <div className="project-info">
+                    <img src={ledgerImg} alt="Decentralized Ledger" className="project-image pb-4" />
+                    <h5 className="project-title fw-bolder text-center">Decentralized Ledger</h5>
+                    <div className="title-line mx-auto p-6"></div>
+                    <p className="project-desc fw-normal text-center pt-4">A blockchain-based healthcare ledger system built on Solana (SOL) to securely store and manage patient records. It ensures data integrity, transparency, and fast transactions while maintaining patient privacy through decentralized encryption.  </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 mb-4">
+                <div className="project-card">
+                  <div className="project-info">
+                    <img src={docImg} alt="Document Management System" className="project-image pb-4" />
+                    <h5 className="project-title fw-bolder text-center">Document Management System</h5>
+                    <div className="title-line mx-auto p-6"></div>
+                    <p className="project-desc fw-normal text-center pt-4">An ongoing project that aims to create an administrative hub, implementing a document tracker and dedpartmental calendar for the office using React JS and Firebase.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div className="row">
-            <div className="col-md-6 mb-4">
-              <div className="project-card">
-                <div className="project-info">
-                  <img src={ledgerImg} alt="Decentralized Ledger" className="project-image pb-4" />
-                  <h5 className="project-title fw-bolder text-center">Decentralized Ledger</h5>
-                  <div className="title-line mx-auto p-6"></div>
-                  <p className="project-desc fw-normal text-center pt-4">A blockchain-based healthcare ledger system built on Solana (SOL) to securely store and manage patient records. It ensures data integrity, transparency, and fast transactions while maintaining patient privacy through decentralized encryption.  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 mb-4">
-              <div className="project-card">
-                <div className="project-info">
-                  <img src={docImg} alt="Document Management System" className="project-image pb-4" />
-                  <h5 className="project-title fw-bolder text-center">Document Management System</h5>
-                  <div className="title-line mx-auto p-6"></div>
-                  <p className="project-desc fw-normal text-center pt-4">An ongoing project that aims to create an administrative hub, implementing a document tracker and dedpartmental calendar for the office using React JS and Firebase.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
       </ScrollAnimation>
     </div>
   );

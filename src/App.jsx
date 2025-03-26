@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
-    <div className='bg-dark text-white'>
+    <div className=''>
       <NavBar />
       <div>
         <Routes>
