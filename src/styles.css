@@ -295,3 +295,11 @@ body.light-mode .info-item,
 body.light-mode .info-item span {
   color: #000000;
 }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+

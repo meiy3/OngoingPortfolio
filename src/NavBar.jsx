@@ -54,21 +54,8 @@ const NavBar = () => {
             <li><CustomLink to="https://github.com/meiy3"><img src={githubLogo} alt="" className='linkIcons' /></CustomLink></li>
             <li><CustomLink to="https://www.linkedin.com/in/john-meynard-demandante-92574931b/"><img src={linkedinLogo} alt="" className='linkIcons' /></CustomLink></li>
             <li>
-              <button 
-                onClick={toggleTheme} 
-                className="theme-toggle"
-                style={{ 
-                  background: 'none', 
-                  border: 'none', 
-                  cursor: 'pointer',
-                  padding: '5px'
-                }}
-              >
-                <img 
-                  src={isDarkMode ? lightIcon : darkIcon} 
-                  alt={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"} 
-                  className='linkIcons' 
-                />
+              <button onClick={toggleTheme} className="theme-toggle">
+                <img src={isDarkMode ? lightIcon : darkIcon} alt={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"} className='linkIcons' />
               </button>
             </li>
           </ul>
