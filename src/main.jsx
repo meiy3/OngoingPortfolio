@@ -1,13 +1,13 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { HashRouter as Router } from 'react-router-dom'; // Use HashRouter instead of BrowserRouter
-import App from './App.jsx';
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'; 
+import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router> {/* Wrap with HashRouter */}
+    <BrowserRouter>
       <App />
-    </Router>
+    </BrowserRouter>
   </StrictMode>,
-);
+)
