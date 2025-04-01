@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
 import "../styles.css";
 import birdImg from "../assets/bird.png";
 import jobImg from "../assets/job.png";
@@ -41,7 +40,6 @@ const Home = () => {
 
   return (
     <div>
-      <ScrollAnimation animateIn="fadeInDown" duration={1.5}>
         <section id="introPage">
           <div className="introPage p-4">
             <div className="row container mt-5 justify-content-center d-lg-flex">
@@ -57,9 +55,9 @@ const Home = () => {
             </div>
           </div>
         </section>
-      </ScrollAnimation>
 
-      <ScrollAnimation animateIn="fadeInLeft" duration={1.5}>
+
+
         <section id="aboutPage" className="p-4">
           <div className="aboutPage col-8 mx-auto">
             <h1 className="fw-bolder">About</h1>
@@ -100,9 +98,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-      </ScrollAnimation>
 
-      <ScrollAnimation animateIn="fadeInUp" duration={1.5}>
         <section id="skillsPage" className="">
           <div className="skillsPage p-4 col-8 mx-auto bg-custom">
             <h1 className="fw-bolder">Tech Skills</h1>
@@ -142,9 +138,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-      </ScrollAnimation>
 
-      <ScrollAnimation animateIn="fadeInUp" duration={1.5}>
         <section id="projectsPage" className="pt-4">
           <div className="projectsPage col-8 mx-auto">
             <h1 className="fw-bolder">Projects</h1>
@@ -195,7 +189,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-      </ScrollAnimation>
     </div>
   );
 };

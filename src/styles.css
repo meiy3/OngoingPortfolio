@@ -25,28 +25,27 @@ body {
 }
 
 section {
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-  background-color: #1a1a1a;
+  background-color: #1a1a1a !important;
+
+}
+
+body.light-mode section {
+  background-color: #ffffff !important;
+
 }
 
 section.appear {
   opacity: 1;
 }
 
-body.light-mode section {
-  background-color: #ffffff;
-}
-
 /* Nav Bar Design */
 .navi {
   width: 100vw;
-  background-color: #1a1a1a;
-  transition: background-color 0.3s ease;
+  background-color: #1a1a1a !important;
 }
 
 body.light-mode .navi {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa !important;
 }
 
 .nav-link {

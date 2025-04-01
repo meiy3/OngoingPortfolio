@@ -32,7 +32,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navi container-fluid bg-dark text-white">
+    <nav className="navi container-fluid text-white">
       <div className="row w-100">
         <div className="col-4">
           <ul className="homePage">
