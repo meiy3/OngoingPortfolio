@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles.css";
-import birdImg from "../assets/bird.png";
-import jobImg from "../assets/job.png";
-import ledgerImg from "../assets/ledger.png";
-import docImg from "../assets/docs.png";
-import cv from "../assets/Resume.pdf";
+import "./styles.css";
+import birdImg from "./assets/bird.png";
+import jobImg from "./assets/job.png";
+import ledgerImg from "./assets/ledger.png";
+import docImg from "./assets/docs.png";
+import cv from "./assets/Resume.pdf";
 
 const Home = () => {
 
