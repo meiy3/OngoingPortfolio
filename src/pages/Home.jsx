@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../styles.css";
 import birdImg from "../assets/bird.png";
 import jobImg from "../assets/job.png";
@@ -7,20 +7,6 @@ import docImg from "../assets/docs.png";
 import cv from "../assets/Resume.pdf";
 
 const Home = () => {
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const handleScroll = () => {
-      sections.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight * 0.75) {
-          section.classList.add("appear");
-        }
-      });
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   function SkillProgress({ name, level }) {
     return (
@@ -55,8 +41,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-
 
         <section id="aboutPage" className="p-4">
           <div className="aboutPage col-8 mx-auto">
