@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.css'
 import NavBar from './NavBar.jsx'
 import { Routes, Route } from 'react-router-dom'
-import Home from './Home.jsx'
+import Home from './Page/Home.jsx'
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {

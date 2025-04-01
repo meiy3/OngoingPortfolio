@@ -1,13 +1,12 @@
 import React from "react";
-import "./styles.css";
-import birdImg from "./assets/bird.png";
-import jobImg from "./assets/job.png";
-import ledgerImg from "./assets/ledger.png";
-import docImg from "./assets/docs.png";
-import cv from "./assets/Resume.pdf";
+import "../styles.css";
+import birdImg from "../assets/bird.png";
+import jobImg from "../assets/job.png";
+import ledgerImg from "../assets/ledger.png";
+import docImg from "../assets/docs.png";
+import cv from "../assets/Resume.pdf";
 
 const Home = () => {
-
   function SkillProgress({ name, level }) {
     return (
       <div className="mb-3">
@@ -84,7 +83,7 @@ const Home = () => {
         </section>
 
         <section id="skillsPage" className="">
-          <div className="skillsPage p-4 col-8 mx-auto bg-custom">
+          <div className="skillsPage p-4 col-8 mx-auto">
             <h1 className="fw-bolder">Tech Skills</h1>
             <div className="skillsPage p-3">
               <div className="row mx-auto justify-content-center">  
@@ -104,7 +103,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="p-4 col-8 mx-auto bg-custom">
+          <div className="skillsPage p-4 col-8 mx-auto">
             <h1 className="fw-bolder">Soft Skills</h1>
             <div className="skillsPage p-3">
               <div className="row mx-auto justify-content-center">  

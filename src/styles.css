@@ -8,115 +8,38 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+:root {
+  --body_background: #1a1a1a;
+  --body_color: #ececec;
+  --secondary_color: #121F45;
+}
+
+[data-theme="light"] {
+  --body_background:#f1f1f1;
+  --body_color: #000000;;
+  --secondary_color: #c5c5c5;
+}
+
 body {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: var(--body_background);
+  color: var(--body_color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.bg-custom {
-  background-color: #121F45 !important;
-  color: white;
-}
-
-.bg-custom2 {
-  background-color: #6692FF !important;
-  color: white;
-}
-
 section {
-  background-color: #1a1a1a !important;
-
-}
-
-body.light-mode section {
-  background-color: #ffffff !important;
-
+  background-color: var(--body_background);
 }
 
 section.appear {
   opacity: 1;
 }
 
-/* Nav Bar Design */
-.navi {
-  width: 100vw;
-  background-color: #1a1a1a !important;
-}
-
-body.light-mode .navi {
-  background-color: #f8f9fa !important;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  transition: all 0.3s;
-}
-
-.nav-link::after {
-  content: '';
-  height: 2px;
-  width: 100%;
-  background-color: #FEFEFE;
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  opacity: 0;
-  transition: all 0.3s;
-}
-
-.nav-link:hover, .nav-link:focus {
-  color: #FEFEFE;
-}
-
-.nav-link:hover::after, .nav-link:focus::after {
-  opacity: 1;
-}
-
-.pages, .socials, .homePage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.socials li {
-  margin: 5px;
-  text-align: center;
-}
-
-ul {
-  flex: 1;
-  text-align: center;
-  list-style: none;
-}
-
-.pages a, .homePage a {
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  font-weight: bolder;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  margin: 0 10px;
-  padding: 5px;
-  transition: all 0.4s;
-}
-
-.linkIcons {
-  height: 25px;
-}
-
 /* Home Page Design */
 .introPage, .skillsPage, .aboutPage, .projectsPage {
   font-family: "Poppins", serif;
   font-weight: 700;
-  color: #ffffff;
-  background-color: #1a1a1a;
+  color: var(--body_color);
+  background-color: var(--body_background);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -125,8 +48,8 @@ ul {
 }
 .skillsPage {
   min-height: 40vh;
-  background-color: #121F45;
-  color: white;
+  background-color: var(--secondary_color) !important;
+  color: var(--body_color);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .aboutPage {
@@ -145,7 +68,7 @@ h1 {
 .btnCV, .btnCert {
   background-color: #FD8302;
   border: none  ;
-  color: white;
+  color: var(--body_color);
   padding: 13px 20px;
   font-size: 16px;
   border-radius: 20px;
@@ -154,23 +77,15 @@ h1 {
   width: 175px;
 }
 
-.btnCV {
-  margin-right: 15%;
-}
-
 .info-item {
   margin-bottom: 20px;
-  color: #ffffff;
-}
-
-.info-item span {
-  color: #ffffff;
+  color: var(--body_color);
 }
 
 /* Skills */
 .progress {
   height: 25px; 
-  background-color: #2a2a2a; 
+  background-color: var(--body_background); 
   border-radius: 5px;
   overflow: hidden;
 }
@@ -181,15 +96,15 @@ h1 {
   line-height: 25px; 
   font-weight: bold;
   background-color: #102B4E; 
-  color: white; 
+  color: var(--body_color); 
 }
 
 /* Projects */
 .project-card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
-  background-color: #121F45;
-  color: white;
+  background-color: var(--secondary_color);
+  color: var(--body_color);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -218,87 +133,7 @@ h1 {
   box-shadow: 0px 8px 16px #FD8302;
 }
 
-body.light-mode .project-card:hover {
-  box-shadow: 0px 8px 16px rgba(253, 131, 2, 0.3);
-}
-
 .project-card:hover .project-desc {
   opacity: 1;
   max-height: 100px;
 }
-
-/* Light mode overrides */
-body.light-mode .introPage,
-body.light-mode .aboutPage,
-body.light-mode .skillsPage,
-body.light-mode .projectsPage,
-body.light-mode .bg-custom {
-  color: #000000;
-  background-color: #ffffff;
-}
-
-body.light-mode .project-card,
-body.light-mode .skillsPage {
-  background-color: #f8f9fa;
-  color: #000000;
-}
-
-body.light-mode .info-item,
-body.light-mode .info-item span,
-body.light-mode .project-title,
-body.light-mode .project-desc,
-body.light-mode .project-card,
-body.light-mode .nav-link:hover, 
-body.light-mode .nav-link:focus {
-  color: #000000;
-}
-
-body.light-mode .progress {
-  background-color: #e9ecef;
-}
-
-body.light-mode .progress-bar {
-  background-color: #FD8302;
-}
-
-body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body.light-mode .bg-custom {
-  background-color: #f8f9fa !important;
-  color: #000000;
-}
-
-body.light-mode .navi {
-  background-color: #ffffff !important;
-}
-
-body.light-mode .nav-link,
-body.light-mode .pages a, 
-body.light-mode .homePage a {
-  color: #000000;
-}
-
-body.light-mode .nav-link::after {
-  background-color: #000000;
-}
-
-body.light-mode .project-card {
-  background-color: #f8f9fa;
-  color: #000000;
-}
-
-body.light-mode .info-item,
-body.light-mode .info-item span {
-  color: #000000;
-}
-
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-}
-
